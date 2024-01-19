@@ -94,6 +94,7 @@ RUN sudo chmod +x ${USER_HOME}/idle.sh && sudo chgrp ${NB_USER} ${USER_HOME}/idl
 #添加守护进程配置文件
 ADD example.conf /etc/supervisor/conf.d/
 
+RUN sudo mkdir -p ${LOG_DIR} && sudo chgrp -R ${NB_USER} ${LOG_DIR} && sudo chown -R ${NB_USER} ${LOG_DIR} && sudo chmod 777 ${LOG_DIR}
 
 #暴露卷
 VOLUME ${LOG_DIR}
