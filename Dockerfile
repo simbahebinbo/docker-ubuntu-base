@@ -9,6 +9,8 @@ ENV DEBCONF_NOWARNINGS yes
 #换源
 RUN sed -i s:/archive.ubuntu.com:/mirrors.aliyun.com:g /etc/apt/sources.list
 RUN sed -i s:/ports.ubuntu.com:/mirrors.aliyun.com:g /etc/apt/sources.list
+RUN sed -i s:/security.ubuntu.com:/mirrors.aliyun.com:g /etc/apt/sources.list
+
 RUN cat /etc/apt/sources.list
 RUN apt-get clean
 RUN apt-get -y update --fix-missing
