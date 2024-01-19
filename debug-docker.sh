@@ -2,4 +2,4 @@
 
 # 进入镜像内部调试
 
-docker exec -it $(docker ps -qa | head -1) /bin/bash
+docker exec -it ubuntu-example /bin/bash
