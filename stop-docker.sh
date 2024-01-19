@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#停掉所有正在运行的docker容器
+#停掉正在运行的docker容器
 
 docker ps -a
 docker stop ubuntu-example
