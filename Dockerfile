@@ -98,8 +98,6 @@ RUN sudo mkdir -p ${LOG_DIR} && sudo chgrp -R ${NB_USER} ${LOG_DIR} && sudo chow
 
 #暴露卷
 VOLUME ${LOG_DIR}
-#暴露端口
-EXPOSE 9055
 
 ENTRYPOINT exec sudo /usr/bin/supervisord --nodaemon
 
