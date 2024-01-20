@@ -57,13 +57,13 @@ RUN echo "zh_CN.UTF-8 UTF-8" > /etc/locale.gen && locale-gen zh_CN.UTF-8 en_US.U
 # Configure environment
 ENV SHELL=/bin/bash
 ENV NB_USER=jovyan
-ARG NB_PASSWORD=123456
+ENV NB_PASSWORD=123456
 ENV NB_UID=1000
 ENV LANG=zh_CN.UTF-8
 ENV LANGUAGE=zh_CN.UTF-8
 ENV LC_ALL=zh_CN.UTF-8
 ENV USER_HOME=/home/${NB_USER}
-ARG LOG_DIR=${USER_HOME}/logs
+ENV LOG_DIR=${USER_HOME}/logs
 
 # Create jovyan user with UID=1000 and in the 'users' group
 #用户名 jovyan  密码:123456
